@@ -2,37 +2,25 @@ package com.driver;
  import java.util.*;
 
 public class Main {
-
-    static class Product {
-
-        public int product(int x, int y){
+    public static class Product{
+        public int product(int x, int y) {
             return x*y;
         }
-
-        public int product(int x, int y, int z){
+        public int product(int x, int y, int z) {
             return x*y*z;
         }
-
-        public double product(double x, double y){
+        public double product(double x, double y) {
             return x*y;
         }
+
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
+        Product p=new Product();
+        System.out.println(p.product(2,3));
+        System.out.println(p.product(2,3,4));
+        System.out.println(p.product(2.3,3.2));
 
-        Scanner sc = new Scanner(System.in);
-
-        int x = sc.nextInt();
-        int y = sc.nextInt();
-        int z = sc.nextInt();
-
-        double a = sc.nextDouble();
-        double b = sc.nextDouble();
-
-        Product p = new Product();
-
-        System.out.println(p.product(x,y));
-        System.out.println(p.product(x,y,z));
-        System.out.println(p.product(a,b));
     }
-}
+    }
+
